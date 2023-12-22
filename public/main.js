@@ -4,7 +4,7 @@ form.addEventListener('submit', (e) => {
     const choice = document.querySelector('input[name=voto]:checked').id;
     const data = { voto: choice };
 
-    fetch('http://votacao.onrender.com/poll', {
+    fetch('https://votacao.onrender.com/poll', {
         method: 'post',
         body: JSON.stringify(data),
         headers: new Headers({
@@ -19,7 +19,7 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
 })
 
-fetch('http://votacao.onrender.com/poll')
+fetch('https://votacao.onrender.com/poll')
 .then(res => res.json())
 .then(data => {
     const votes = data.votos;
