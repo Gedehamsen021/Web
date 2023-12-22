@@ -15,8 +15,8 @@ form.addEventListener('submit', (e) => {
         .then(data => console.log(data))
         .catch(err => console.log(err));
 
-
     e.preventDefault();
+    window.location.reload()
 })
 
 fetch('https://votacao.onrender.com/poll')
